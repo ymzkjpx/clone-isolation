@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/html" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="_parts/htmlhead::htmlhead(~{::title})">
+    <meta charset="UTF-8">
+    <title>Timecard Form</title>
+</head>
+<body class="bg-light">
+<header th:replace="_parts/navigation::navigation"></header>
+<main class="container">
+    <section>
+        <form action="#" method="post" name="body" th:action="@{/timecard}">
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label" for="employeeNameFiled">Email</label>
+                <div class="col-sm-10"><input class="form-control" id="employeeNameFiled" type="text"></div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label" for="workDateField">勤務日</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="workDateField" type="Date">
+                </div>
+            </div>
+            <div class="row mb-3 gy-2 gx-3 align-items-center">
+                <label class="col-sm-2 col-form-label">開始時刻</label>
+                <div class="col-sm">
+                    <label class="visually-hidden" for="workStartHourlyField">時</label>
+                    <div class="input-group">
+                        <input class="form-control" id="workStartHourlyField" placeholder="09" type="text">
+                        <div class="input-group-text">時</div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <label class="visually-hidden" for="workStartMinutesField">分</label>
+                    <div class="input-group">
+                        <input class="form-control" id="workStartMinutesField" placeholder="00" type="text">
+                        <div class="input-group-text">分</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3 gy-2 gx-3 align-items-center">
+                <label class="col-sm-2 col-form-label">終了時刻</label>
+                <div class="col-sm">
+                    <label class="visually-hidden" for="workEndHourlyField">時</label>
+                    <div class="input-group">
+                        <input class="form-control" id="workEndHourlyField" placeholder="18" type="text">
+                        <div class="input-group-text">時</div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <label class="visually-hidden" for="workEndMinutesField">分</label>
+                    <div class="input-group">
+                        <input class="form-control" id="workEndMinutesField" placeholder="00" type="text">
+                        <div class="input-group-text">分</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">休憩時間</label>
+                <div class="col-sm-6">
+                    <label class="visually-hidden" for="daytimeBreakTimeField">分</label>
+                    <div class="input-group">
+                        <input class="form-control" id="daytimeBreakTimeField" placeholder="70" type="text">
+                        <div class="input-group-text">分</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">休憩時間(深夜)</label>
+                <div class="col-sm-6">
+                    <label class="visually-hidden" for="nightBreakTimeField">分</label>
+                    <div class="input-group">
+                        <input class="form-control" id="nightBreakTimeField" placeholder="70" type="text">
+                        <div class="input-group-text">分</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3 gy-3">
+                <span class="col-sm-2"></span>
+                <div class="align-items-center d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-lg btn-primary" type="button">登録</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</main>
+</body>
+</html>
