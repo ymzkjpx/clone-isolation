@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="ja" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="_parts/htmlhead::htmlhead(~{::title})">
     <meta charset="UTF-8">
     <title>DashBoard</title>
 </head>
 <body>
+<header th:replace="_parts/navigation::navigation"></header>
 <main>
     <article>
-        <h1>DashBoard</h1>
-        <p>first commit</p>
+        <main>
+            <ul>
+                <li><a href="#" th:href="@{/timecard}">勤務時間の入力</a></li>
+                <li><a href="#" th:href="@{/employees}">給与の管理</a></li>
+                <li><a href="#" th:href="@{/employees}">従業員一覧</a></li>
+            </ul>
+        </main>
     </article>
 </main>
 </body>
