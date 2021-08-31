@@ -1,4 +1,4 @@
-package com.cloneisolation;
+package com.cloneisolation.presentation.controller.dashboard;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

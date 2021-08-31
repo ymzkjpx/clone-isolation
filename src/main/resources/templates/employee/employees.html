@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="_parts/htmlhead::htmlhead(~{::title})">
+    <meta charset="UTF-8">
+    <title>DashBoard</title>
+</head>
+<body class="bg-light">
+<header th:replace="_parts/navigation::navigation"></header>
+<main class="container">
+    <article>employee form</article>
+    <p th:text="${text}">(text)</p>
+    <article class="py-5">
+        <block th:if="${operationResults.isPresents()}">
+            <h4>検索結果[人]:
+                <span th:text="${operationResults.size()}"></span>
+            </h4>
+            <table class="container table text-left pull-left align-middle">
+                <thead>
+                <tr class="row container-fluid flex-nowrap text-center">
+                    <th class="col">従業員ID</th>
+                    <th class="col">氏名</th>
+                    <th class="col">勤務時間</th>
+                    <th class="col">時給</th>
+                    <th class="col">給与</th>
+                    <th class="col">契約関係</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="result : ${operationResults.asList()}" class="row container-fluid flex-nowrap">
+                    <td th:text="${result.showEmployeeId()}" class="col">Title</td>
+                    <td th:text="${result.showWorkerName()}" class="col">Title</td>
+                    <td th:text="${result.showTotalWorkedTime()}" class="col">Author</td>
+                    <td th:text="${result.showHourlyWage()} + ' 円'" class="col">Author</td>
+                    <td th:text="${result.showMonthlyWage()} +' 円'" class="col">Author</td>
+                    <td th:text="${result.showRelationShip()}" class="col text-center">Stock</td>
+                </tr>
+                </tbody>
+            </table>
+        </block>
+    </article>
+</main>
+
+</body>
+</html>
