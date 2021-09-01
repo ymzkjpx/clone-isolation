@@ -10,13 +10,13 @@
     <section>
         <form action="#" method="post" name="body" th:action="@{/timecard}">
             <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" for="employeeNameFiled">Email</label>
+                <label class="col-sm-2 col-form-label" for="employeeNameFiled">氏名</label>
                 <div class="col-sm-10"><input class="form-control" id="employeeNameFiled" type="text"></div>
             </div>
             <div class="row mb-3">
                 <label class="col-sm-2 col-form-label" for="workDateField">勤務日</label>
                 <div class="col-sm-10">
-                    <input class="form-control" id="workDateField" type="Date">
+                    <input class="form-control" id="workDateField" type="Date" placeholder="2021/09/01" value="">
                 </div>
             </div>
             <div class="row mb-3 gy-2 gx-3 align-items-center">
@@ -71,6 +71,13 @@
                         <input class="form-control" id="nightBreakTimeField" placeholder="70" type="text">
                         <div class="input-group-text">分</div>
                     </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">休日</label>
+                <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">休日出勤</label>
                 </div>
             </div>
             <div class="row mb-3 gy-3">
