@@ -8,15 +8,17 @@
 <header th:replace="_parts/navigation::navigation"></header>
 <main class="container">
     <section>
-        <form action="#" method="post" name="body" th:action="@{/timecard}">
+        <form action="#" method="post" th:action="@{/timecard}" th:object="${timecardForm}">
             <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" for="employeeNameFiled">氏名</label>
-                <div class="col-sm-10"><input class="form-control" id="employeeNameFiled" type="text"></div>
+                <label class="col-sm-2 col-form-label" for="employeeIdField">従業員ID</label>
+                <div class="col-sm-10" id="employeeIdField">
+                    <input class="form-control" placeholder="1" type="text" th:field="*{employeeId.value}">
+                </div>
             </div>
             <div class="row mb-3">
                 <label class="col-sm-2 col-form-label" for="workDateField">勤務日</label>
                 <div class="col-sm-10">
-                    <input class="form-control" id="workDateField" type="Date" placeholder="2021/09/01" value="">
+                    <input class="form-control" id="workDateField" placeholder="2021/09/01" value="2021/09/01" type="Date">
                 </div>
             </div>
             <div class="row mb-3 gy-2 gx-3 align-items-center">
@@ -24,14 +26,14 @@
                 <div class="col-sm">
                     <label class="visually-hidden" for="workStartHourlyField">時</label>
                     <div class="input-group">
-                        <input class="form-control" id="workStartHourlyField" placeholder="09" type="text">
+                        <input class="form-control" id="workStartHourlyField" placeholder="09" type="text" value="9">
                         <div class="input-group-text">時</div>
                     </div>
                 </div>
                 <div class="col-sm">
                     <label class="visually-hidden" for="workStartMinutesField">分</label>
                     <div class="input-group">
-                        <input class="form-control" id="workStartMinutesField" placeholder="00" type="text">
+                        <input class="form-control" id="workStartMinutesField" placeholder="00" type="text" value="0">
                         <div class="input-group-text">分</div>
                     </div>
                 </div>
@@ -41,14 +43,14 @@
                 <div class="col-sm">
                     <label class="visually-hidden" for="workEndHourlyField">時</label>
                     <div class="input-group">
-                        <input class="form-control" id="workEndHourlyField" placeholder="18" type="text">
+                        <input class="form-control" id="workEndHourlyField" placeholder="18" type="text" value="18">
                         <div class="input-group-text">時</div>
                     </div>
                 </div>
                 <div class="col-sm">
                     <label class="visually-hidden" for="workEndMinutesField">分</label>
                     <div class="input-group">
-                        <input class="form-control" id="workEndMinutesField" placeholder="00" type="text">
+                        <input class="form-control" id="workEndMinutesField" placeholder="00" type="text" value="0">
                         <div class="input-group-text">分</div>
                     </div>
                 </div>
@@ -58,7 +60,7 @@
                 <div class="col-sm-6">
                     <label class="visually-hidden" for="daytimeBreakTimeField">分</label>
                     <div class="input-group">
-                        <input class="form-control" id="daytimeBreakTimeField" placeholder="70" type="text">
+                        <input class="form-control" id="daytimeBreakTimeField" placeholder="70" type="text" value="0">
                         <div class="input-group-text">分</div>
                     </div>
                 </div>
@@ -68,7 +70,7 @@
                 <div class="col-sm-6">
                     <label class="visually-hidden" for="nightBreakTimeField">分</label>
                     <div class="input-group">
-                        <input class="form-control" id="nightBreakTimeField" placeholder="70" type="text">
+                        <input class="form-control" id="nightBreakTimeField" placeholder="70" type="text" value="0">
                         <div class="input-group-text">分</div>
                     </div>
                 </div>
@@ -76,14 +78,14 @@
             <div class="row mb-3">
                 <label class="col-sm-2 col-form-label">休日</label>
                 <div class="col-auto">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                    <label class="form-check-label" for="flexCheckChecked">休日出勤</label>
+                    <input class="form-check-input" id="isDaysOff" type="checkbox" value="">
+                    <label class="form-check-label" for="isDaysOff">休日出勤</label>
                 </div>
             </div>
             <div class="row mb-3 gy-3">
                 <span class="col-sm-2"></span>
                 <div class="align-items-center d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-lg btn-primary" type="button">登録</button>
+                    <button class="btn btn-lg btn-primary" type="submit">登録</button>
                 </div>
             </div>
         </form>
