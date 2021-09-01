@@ -23,6 +23,19 @@ public class TimecardController {
         return "timecard/form";
     }
 
-
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        binder.setAllowedFields(
+                "employeeId.value",
+                "workDate.value",
+                "startTime.hour.value",
+                "startTime.minute.value",
+                "endTime.hour.value",
+                "endTime.minute.value",
+                "daytimeBreakTime.value.value",
+                "nightBreakTime.value.value",
+                "isDaysOff"
+        );
+    }
 
 }

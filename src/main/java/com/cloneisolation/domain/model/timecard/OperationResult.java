@@ -1,6 +1,6 @@
-package com.cloneisolation.domain.timecard;
+package com.cloneisolation.domain.model.timecard;
 
-import com.cloneisolation.domain.employee.EmployeeId;
+import com.cloneisolation.domain.model.employee.EmployeeId;
 
 public class OperationResult {
     EmployeeId employeeId;

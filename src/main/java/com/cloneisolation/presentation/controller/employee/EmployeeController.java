@@ -1,7 +1,7 @@
 package com.cloneisolation.presentation.controller.employee;
 
 import com.cloneisolation.application.coordinator.EmployeesCoordinator;
-import com.cloneisolation.domain.timecard.OperationResults;
+import com.cloneisolation.domain.model.timecard.OperationResults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

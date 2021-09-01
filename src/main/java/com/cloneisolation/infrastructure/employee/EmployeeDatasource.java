@@ -1,8 +1,8 @@
 package com.cloneisolation.infrastructure.employee;
 
 import com.cloneisolation.application.service.EmployeesRepository;
-import com.cloneisolation.domain.timecard.OperationResult;
-import com.cloneisolation.domain.timecard.OperationResults;
+import com.cloneisolation.domain.model.timecard.OperationResult;
+import com.cloneisolation.domain.model.timecard.OperationResults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

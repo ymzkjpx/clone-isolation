@@ -1,4 +1,4 @@
-package com.cloneisolation.domain.employee;
+package com.cloneisolation.domain.model.employee;
 
 public class Employee {
     EmployeeId employeeId;

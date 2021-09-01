@@ -1,4 +1,4 @@
-package com.cloneisolation.domain.timecard;
+package com.cloneisolation.domain.model.timecard;
 
 import java.util.List;
 
