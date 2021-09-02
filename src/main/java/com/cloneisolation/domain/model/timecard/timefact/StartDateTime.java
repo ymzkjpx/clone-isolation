@@ -35,7 +35,7 @@ public class StartDateTime {
         return value.isAfter(other.value);
     }
 
-    public boolean isBefore(EndDateTime other){
+    public boolean isAfter(EndDateTime other){
         return value.isBefore(other.value);
     }
 

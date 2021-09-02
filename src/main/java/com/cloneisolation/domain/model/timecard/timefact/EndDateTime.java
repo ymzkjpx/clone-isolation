@@ -50,7 +50,7 @@ public class EndDateTime {
         return value.isBefore(other);
     }
 
-    public boolean isAfter(EndDateTime other) {
+    public boolean isBefore(StartDateTime other) {
         return value.isAfter(other.value);
     }
 

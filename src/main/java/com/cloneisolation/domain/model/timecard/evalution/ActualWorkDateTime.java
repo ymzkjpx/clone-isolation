@@ -1,5 +1,12 @@
 package com.cloneisolation.domain.model.timecard.evalution;
 
+import com.cloneisolation.domain.model.timecard.timefact.WorkRange;
+
+import javax.naming.Binding;
+
+/**
+ * 勤務日時実績
+ */
 public class ActualWorkDateTime{
     WorkRange workRange;
     DaytimeBreakTime daytimeBreakTime;
@@ -26,5 +33,37 @@ public class ActualWorkDateTime{
 
     public NightBreakTime nightBreakTime() {
         return nightBreakTime;
+    }
+
+    public WorkDate workDate(){
+        return new WorkDate(workRange.startDateTime().date());
+    }
+
+    public WorkTime workTime(){
+        return new WorkTime(dayTimeWorkTime(), nightWorkTime());
+    }
+
+    public BreakTime breakTime(){
+        return new BreakTime(daytimeBreakTime, nightBreakTime);
+    }
+
+    public DaytimeBindingTime daytimeBindingTime(){
+        BindingTime bindingTime = new BindingTime(workRange);
+        NightBindingTime nightBindingTime = nightBindingTime();
+        return new DaytimeBindingTime(bindingTime, nightBindingTime);
+    }
+
+    public DaytimeWorkTime dayTimeWorkTime(){
+        DaytimeBindingTime bindingTime = daytimeBindingTime();
+        return bindingTime.subtract(daytimeBreakTime);
+    }
+
+    public NightBindingTime nightBindingTime(){
+        return
+    }
+
+    public NightWorkTime nightWorkTime(){
+        NightBindingTime bindingTime = nightBindingTime();
+        return
     }
 }
