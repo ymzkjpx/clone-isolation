@@ -14,7 +14,7 @@ public class Time {
     }
 
     public Time(Integer hour, Integer minute){
-        this(LocalTime.of(hour, minute))
+        this(LocalTime.of(hour, minute));
     }
 
     public Time(String hour, String minute){

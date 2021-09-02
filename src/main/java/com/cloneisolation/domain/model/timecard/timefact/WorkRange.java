@@ -1,25 +1,23 @@
 package com.cloneisolation.domain.model.timecard.timefact;
 
-import com.cloneisolation.domain.model.timecard.evalution.WorkDate;
-
 public class WorkRange {
     StartDateTime startDateTime;
-    EndDateTIme endDateTIme;
+    EndDateTime endDateTime;
     boolean workTimeValid;
 
     @Deprecated
     WorkRange(){}
 
-    public WorkRange(StartDateTime startDateTime, EndDateTIme endDateTIme) {
+    public WorkRange(StartDateTime startDateTime, EndDateTime endDateTIme) {
         this.startDateTime = startDateTime;
-        this.endDateTIme   = endDateTIme;
+        this.endDateTime   = endDateTIme;
     }
 
     public StartDateTime startDateTime() {
         return startDateTime;
     }
 
-    public EndDateTIme endDateTIme() {
-        return endDateTIme;
+    public EndDateTime endDateTIme() {
+        return endDateTime;
     }
 }
