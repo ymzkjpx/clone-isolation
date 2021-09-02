@@ -1,9 +1,9 @@
 package com.cloneisolation.domain.model.timecard.timefact;
 
-import org.springframework.format.annotation.DateTimeFormat;
+import com.cloneisolation.domain.type.datetime.DateTime;
 
 public class StartDateTime {
-    DateTime value:
+    DateTime value;
 
     @Deprecated
     StartDateTime(){}
@@ -11,4 +11,6 @@ public class StartDateTime {
     public StartDateTime(DateTime value) {
         this.value = value;
     }
+
+
 }
