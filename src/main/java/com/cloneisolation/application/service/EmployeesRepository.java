@@ -1,7 +1,6 @@
 package com.cloneisolation.application.service;
 
-import com.cloneisolation.domain.timecard.OperationResult;
-import com.cloneisolation.domain.timecard.OperationResults;
+import com.cloneisolation.domain.model.timecard.OperationResults;
 import org.springframework.stereotype.Repository;
 
 @Repository

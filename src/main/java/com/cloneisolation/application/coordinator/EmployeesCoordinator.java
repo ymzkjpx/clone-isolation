@@ -1,7 +1,7 @@
 package com.cloneisolation.application.coordinator;
 
 import com.cloneisolation.application.service.EmployeesService;
-import com.cloneisolation.domain.timecard.OperationResults;
+import com.cloneisolation.domain.model.timecard.OperationResults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

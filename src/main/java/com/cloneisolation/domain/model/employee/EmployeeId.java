@@ -1,4 +1,4 @@
-package com.cloneisolation.domain.employee;
+package com.cloneisolation.domain.model.employee;
 
 public class EmployeeId {
     Integer value;
@@ -12,6 +12,10 @@ public class EmployeeId {
 
     public Integer value(){
         return value;
+    }
+
+    public EmployeeId from(String value){
+        return new EmployeeId(Integer.parseInt(value));
     }
 
     @Override
