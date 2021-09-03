@@ -23,7 +23,7 @@ public class WorkRange {
         return endDateTime;
     }
 
-    public Minute minute(){
+    public Minute minute() {
         startDateTime.time()
     }
 

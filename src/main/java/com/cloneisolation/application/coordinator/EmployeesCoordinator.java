@@ -13,7 +13,7 @@ public class EmployeesCoordinator {
     /**
      * 従業員一覧を表示する
      */
-    public OperationResults showList(){
+    public OperationResults showList() {
         return employeesService.showList();
     }
 }

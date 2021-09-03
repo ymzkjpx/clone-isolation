@@ -6,17 +6,17 @@ public class NightBindingTime {
     Minute value;
 
     @Deprecated
-    NightBindingTime(){}
+    NightBindingTime() {}
 
     public NightBindingTime(Minute value) {
         this.value = value;
     }
 
-    public Minute minute(){
+    public Minute minute() {
         return value;
     }
 
-    NightWorkTime subtract(NightBreakTime nightBreakTime){
+    NightWorkTime subtract(NightBreakTime nightBreakTime) {
         return new NightWorkTime(value.sub(nightBreakTime.minute()));
     }
 }

@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.*;
 public class TimecardController {
 
     @GetMapping
-    String init(Model model){
+    String init(Model model) {
         model.addAttribute("timecardForm", TimecardForm.empty());
         return "timecard/form";
     }
 
     @PostMapping
-    String register(@ModelAttribute("timecardForm")TimecardForm timecardForm, BindingResult bindingResult){
+    String register(@ModelAttribute("timecardForm") TimecardForm timecardForm, BindingResult bindingResult) {
         System.out.println(timecardForm);
         System.out.println(timecardForm.employeeId.value());
         return "timecard/form";
@@ -25,8 +25,7 @@ public class TimecardController {
 
     @InitBinder
     public void initBinder(WebDataBinder binder) {
-        binder.setAllowedFields(
-                "employeeId.value",
+        binder.setAllowedFields("employeeId.value",
                 "workDate.value",
                 "startTime.hour.value",
                 "startTime.minute.value",
@@ -34,8 +33,7 @@ public class TimecardController {
                 "endTime.minute.value",
                 "daytimeBreakTime.value.value",
                 "nightBreakTime.value.value",
-                "isDaysOff"
-        );
+                "isDaysOff");
     }
 
 }

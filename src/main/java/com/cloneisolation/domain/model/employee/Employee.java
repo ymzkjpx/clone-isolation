@@ -4,9 +4,9 @@ public class Employee {
     EmployeeId employeeId;
 
     @Deprecated
-    Employee(){}
+    Employee() {}
 
-    public Employee(EmployeeId id){
+    public Employee(EmployeeId id) {
         this.employeeId = id;
     }
 

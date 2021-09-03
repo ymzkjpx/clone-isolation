@@ -4,7 +4,7 @@ public class EndTime {
     EndHour endHour;
     EndMinutes endMinutes;
 
-    EndTime(){}
+    EndTime() {}
 
     public EndTime(EndHour endHour, EndMinutes endMinutes) {
         this.endHour    = endHour;

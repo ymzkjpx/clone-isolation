@@ -35,7 +35,7 @@ public class OperationResult {
     }
 
     public float showHourlyWage() {
-        return (float)1000.0;
+        return (float) 1000.0;
     }
 
     public float showTotalWorkedTime() {

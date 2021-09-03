@@ -19,7 +19,7 @@ public class StartDateTime {
         return value.date();
     }
 
-    public Time time(){
+    public Time time() {
         return value.time();
     }
 

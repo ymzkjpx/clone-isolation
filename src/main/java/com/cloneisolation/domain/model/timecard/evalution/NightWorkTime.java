@@ -6,17 +6,17 @@ public class NightWorkTime {
     Minute value;
 
     @Deprecated
-    NightWorkTime(){}
+    NightWorkTime() {}
 
     public NightWorkTime(Minute value) {
         this.value = value;
     }
 
-    public NightWorkTime(int minute){
+    public NightWorkTime(int minute) {
         this(new Minute(minute));
     }
 
-    public Minute minute(){
+    public Minute minute() {
         return value;
     }
 

@@ -3,7 +3,7 @@ package com.cloneisolation.presentation.controller.timecard;
 public class StartHour {
     String value;
 
-    StartHour(){}
+    StartHour() {}
 
     public StartHour(String value) {
         this.value = value;
@@ -14,7 +14,7 @@ public class StartHour {
         return "StartHour{" + "value='" + value + '\'' + '}';
     }
 
-    int toInt(){
+    int toInt() {
         return Integer.parseInt(value);
     }
 }
