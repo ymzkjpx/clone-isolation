@@ -60,7 +60,7 @@ public class ActualWorkDateTime {
     }
 
     public NightBindingTime nightBindingTime() {
-        return
+        return new NightBindingTime(workRange);
     }
 
     public NightWorkTime nightWorkTime() {

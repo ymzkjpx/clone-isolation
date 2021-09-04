@@ -1,5 +1,6 @@
 package com.cloneisolation.domain.model.timecard.timefact;
 
+import com.cloneisolation.domain.type.datetime.DateTime;
 import com.cloneisolation.domain.type.time.Minute;
 
 public class WorkRange {
@@ -24,7 +25,7 @@ public class WorkRange {
     }
 
     public Minute minute() {
-        startDateTime.time()
+        return DateTime.between(startDateTime.value, endDateTime.value);
     }
 
     public String endTimeText() {
