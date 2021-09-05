@@ -23,6 +23,10 @@ public class StartDateTime {
         return value.time();
     }
 
+    public DateTime value(){
+        return value;
+    }
+
     public boolean isAfter(DateTime other){
         return value.isAfter(other);
     }

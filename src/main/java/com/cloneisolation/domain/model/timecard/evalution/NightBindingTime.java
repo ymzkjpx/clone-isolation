@@ -15,7 +15,7 @@ public class NightBindingTime {
     }
 
     public NightBindingTime(WorkRange workRange, Night night){
-        this(
+        this(night.nightMinute(workRange.startDateTime().value(), workRange.endDateTime().value()));
     }
 
     public NightBindingTime(WorkRange workRange){
@@ -23,7 +23,7 @@ public class NightBindingTime {
     }
 
     public NightWorkTime nightWorkTime(){
-        return nightBindingTime()
+        return nightBindingTime();
     }
 
     public Minute minute() {

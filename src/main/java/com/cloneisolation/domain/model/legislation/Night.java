@@ -31,6 +31,6 @@ public class Night {
     }
 
     public Minute nightMinute(DateTime startDateTime, DateTime endDateTime){
-        return
+        return DateTime.between(startDateTime, endDateTime);
     }
 }

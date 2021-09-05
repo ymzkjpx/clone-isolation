@@ -20,7 +20,7 @@ public class WorkRange {
         return startDateTime;
     }
 
-    public EndDateTime endDateTIme() {
+    public EndDateTime endDateTime() {
         return endDateTime;
     }
 

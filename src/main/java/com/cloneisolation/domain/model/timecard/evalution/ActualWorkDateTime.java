@@ -64,7 +64,7 @@ public class ActualWorkDateTime {
     }
 
     public NightWorkTime nightWorkTime() {
-        NightBindingTime bindingTime = nightBindingTime();
-        return
+        NightBindingTime nightBindingTime = nightBindingTime();
+        return nightBindingTime.subtract(nightBreakTime);
     }
 }
