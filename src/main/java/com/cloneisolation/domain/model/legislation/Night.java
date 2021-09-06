@@ -31,6 +31,15 @@ public class Night {
     }
 
     public Minute nightMinute(DateTime startDateTime, DateTime endDateTime){
-        return DateTime.between(startDateTime, endDateTime);
+        Minute nightBeginTime = nightBeginTime(startDateTime, endDateTime);
+        Minute nightFinishTime = nightFinishTime(startDateTime, endDateTime);
+        return nightBeginTime.add(nightFinishTime);
     }
+
+    public Minute nightBeginTime(DateTime startDateTime, DateTime endDateTime){
+        //
+        ni
+    }
+
+
 }
