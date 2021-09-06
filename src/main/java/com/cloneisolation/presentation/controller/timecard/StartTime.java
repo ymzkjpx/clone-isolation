@@ -5,7 +5,7 @@ public class StartTime {
     StartMinutes startMinutes;
 
     @Deprecated
-    StartTime(){}
+    StartTime() {}
 
     public StartTime(StartHour hour, StartMinutes startMinutes) {
         this.hour         = hour;

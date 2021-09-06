@@ -9,7 +9,7 @@ public class EmployeesService {
     @Autowired
     EmployeesRepository employeesRepository;
 
-    public OperationResults showList(){
+    public OperationResults showList() {
         return employeesRepository.list();
     }
 }

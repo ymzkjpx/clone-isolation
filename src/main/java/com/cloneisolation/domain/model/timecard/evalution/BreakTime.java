@@ -6,13 +6,13 @@ public class BreakTime {
     Minute value;
 
     @Deprecated
-    BreakTime(){}
+    BreakTime() {}
 
     public BreakTime(Minute value) {
         this.value = value;
     }
 
-    public BreakTime(DaytimeBreakTime daytimeBreakTime, NightBreakTime nightBreakTime){
+    public BreakTime(DaytimeBreakTime daytimeBreakTime, NightBreakTime nightBreakTime) {
         this(daytimeBreakTime.minute.add(nightBreakTime.minute));
     }
 

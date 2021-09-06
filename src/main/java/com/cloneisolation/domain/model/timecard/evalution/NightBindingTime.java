@@ -1,22 +1,36 @@
 package com.cloneisolation.domain.model.timecard.evalution;
 
+import com.cloneisolation.domain.model.legislation.Night;
+import com.cloneisolation.domain.model.timecard.timefact.WorkRange;
 import com.cloneisolation.domain.type.time.Minute;
 
 public class NightBindingTime {
     Minute value;
 
     @Deprecated
-    NightBindingTime(){}
+    NightBindingTime() {}
 
     public NightBindingTime(Minute value) {
         this.value = value;
     }
 
-    public Minute minute(){
+    public NightBindingTime(WorkRange workRange, Night night){
+        this(night.nightMinute(workRange.startDateTime().value(), workRange.endDateTime().value()));
+    }
+
+    public NightBindingTime(WorkRange workRange){
+        this(workRange, Night.legal());
+    }
+
+    public NightWorkTime nightWorkTime(){
+        return nightBindingTime();
+    }
+
+    public Minute minute() {
         return value;
     }
 
-    NightWorkTime subtract(NightBreakTime nightBreakTime){
+    NightWorkTime subtract(NightBreakTime nightBreakTime) {
         return new NightWorkTime(value.sub(nightBreakTime.minute()));
     }
 }

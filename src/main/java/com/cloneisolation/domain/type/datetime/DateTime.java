@@ -13,45 +13,45 @@ public class DateTime {
     LocalDateTime value;
 
     @Deprecated
-    DateTime(){}
+    DateTime() {}
 
     public DateTime(LocalDateTime value) {
         this.value = value;
     }
 
-    public LocalDateTime value(){
+    public LocalDateTime value() {
         return value;
     }
 
-    public LocalDate date(){
+    public LocalDate date() {
         return value.toLocalDate();
     }
 
-    public static DateTime parse(String date, String time){
+    public static DateTime parse(String date, String time) {
         LocalDate d = LocalDate.parse(date, DateTimeFormatter.ISO_DATE);
         LocalTime t = LocalTime.parse(time, DateTimeFormatter.ofPattern("H:m"));
         return new DateTime(LocalDateTime.of(d, t));
     }
 
-    public static DateTime parse(String date, String hour, String minute){
+    public static DateTime parse(String date, String hour, String minute) {
         return parse(date, (hour + ":" + minute));
     }
 
 
-    public Time time(){
+    public Time time() {
         return new Time(value.toLocalTime());
     }
 
-    public static Minute between(DateTime start, DateTime end){
+    public static Minute between(DateTime start, DateTime end) {
         Duration duration = Duration.between(start.value, end.value);
-        return new Minute((int)duration.toMinutes());
+        return new Minute((int) duration.toMinutes());
     }
 
-    public boolean isAfter(DateTime other){
+    public boolean isAfter(DateTime other) {
         return value.isAfter(other.value);
     }
 
-    public boolean isBefore(DateTime other){
+    public boolean isBefore(DateTime other) {
         return value.isBefore(other.value);
     }
 }

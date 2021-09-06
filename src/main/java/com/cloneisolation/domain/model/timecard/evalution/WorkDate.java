@@ -9,13 +9,13 @@ public class WorkDate {
     LocalDate value;
 
     @Deprecated
-    WorkDate(){}
+    WorkDate() {}
 
     public WorkDate(LocalDate value) {
         this.value = value;
     }
 
-    public LocalDate value(){
+    public LocalDate value() {
         return value;
     }
 

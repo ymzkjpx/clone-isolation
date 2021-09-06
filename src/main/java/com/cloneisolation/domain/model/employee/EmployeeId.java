@@ -4,17 +4,17 @@ public class EmployeeId {
     Integer value;
 
     @Deprecated
-    EmployeeId(){}
+    EmployeeId() {}
 
-    public EmployeeId(Integer value){
+    public EmployeeId(Integer value) {
         this.value = value;
     }
 
-    public Integer value(){
+    public Integer value() {
         return value;
     }
 
-    public EmployeeId from(String value){
+    public EmployeeId from(String value) {
         return new EmployeeId(Integer.parseInt(value));
     }
 

@@ -8,13 +8,13 @@ public class DaytimeBreakTime {
     Minute minute;
 
     @Deprecated
-    DaytimeBreakTime(){}
+    DaytimeBreakTime() {}
 
     public DaytimeBreakTime(Minute minute) {
         this.minute = minute;
     }
 
-    public static Minute from(String value){
+    public static Minute from(String value) {
         return Minute.from(value);
     }
 }

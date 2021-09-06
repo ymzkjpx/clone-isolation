@@ -23,6 +23,10 @@ public class EndDateTime {
                     .toLocalDate();
     }
 
+    public DateTime value(){
+        return value;
+    }
+
     String clockTimeTextOverDays(int days) {
         LocalTime localTime = value.time()
                                    .value();

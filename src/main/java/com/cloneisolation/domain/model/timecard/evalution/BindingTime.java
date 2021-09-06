@@ -10,13 +10,13 @@ public class BindingTime {
     WorkRange workRange;
 
     @Deprecated
-    BindingTime(){}
+    BindingTime() {}
 
     public BindingTime(WorkRange workRange) {
         this.workRange = workRange;
     }
 
-    public Minute minute(){
+    public Minute minute() {
         return workRange.minute();
     }
 
